@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="zangjinliang@222.128.117.206:5678 password" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="zangjinliang@222.128.117.206:5678 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/zangjinliang/Work/3D-Hand/catiHand" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

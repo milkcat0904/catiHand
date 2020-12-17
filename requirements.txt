@@ -1,0 +1,16 @@
+numpy
+torch
+torchvision
+termcolor
+cython
+tqdm
+pyyaml
+opencv-python
+torchsummary
+pillow
+matplotlib
+wandb
+rich
+opencv-contrib-python
+adabelief_pytorch
+ranger-adabelief
