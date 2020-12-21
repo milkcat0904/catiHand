@@ -1,0 +1,20 @@
+dataset:
+  gt_index:
+    point2d: [0, 42]
+    point3d: [42, 105]
+    bone_len: [105, 125]
+    bone_vec: [125, 185]
+    rot_mat: [185, 194]
+    bbox: [194, 198]
+
+model:
+  resume: False
+  hyperPara_path: 'config/models-cfgs/baseline.yaml'
+  # 经典网络
+#  input_size: [96, 96, 1]
+  input_size: [80, 80, 1]
+
+val:
+  batch_size: 256
+  shuffle: False
+  num_worker: 8

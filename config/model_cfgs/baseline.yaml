@@ -1,0 +1,64 @@
+dataset:
+  dataset_folder: '/home/maowentao/Data/pose_samples/A11_new'
+    label_folder: '/home/Data/catidog/Dataset/A11-Hand'
+    train_json:
+
+      - 'labels/train-label-20201030A11'
+    #    - 'labels/train-label-20201030A11'
+    #    - 'labels/001/train-label-a11-badcase-no001-mini'
+
+    train_folder:
+      - '20201030_A11_train'
+    #    - '20201101_RGB_train'
+    #    - '20201030_A11_train'
+
+    test_folder:
+      - '/home/maowentao/Data/pose_samples/A11_new/20201113_A11_test_cutoff700'
+    #    - '/home/maowentao/Data/pose_samples/A11_new/20201030_A11_train'
+
+    test_json:
+      - 'labels/test-label-20201113A11-cutoff700'
+    #    - 'labels/001/test-label-a11-badcase-001-mini'
+
+    mask_folder: '20201101_RGB_train'
+    bg_folder: '/home/maowentao/Data/pose_samples/A11_new/20201103_BG_train'
+    cls_folder: '20201014cls_train'
+
+  augmentation:
+    brightness: [ 0.3, 1.7 ]
+    contrast: 0.1
+    mask_alpha: 0.5
+    rotation_angle_center: [ -45, 45 ]
+    rotation_angle_refpt: [ -20, 20 ]
+
+    prop_thresh:
+      bg: 0
+      rotation: 0
+      erasing: 0
+      bbox: 1
+
+  use_custom_trans: True
+  use_noise2d: False
+  point2d_noise: [ -10, 10 ]
+  use_ignore_dark: True
+
+wandb:
+  # 是否使用wandb
+  use: True
+  project_name: 'A11-megatrack'
+  #  name: 'only-cls'
+  name: 'a11-poseprior-3transconv-nopool'
+  tags: ''
+
+  test_monitors: [ 'loss',
+    #                  'loss2d',
+                   'new_loss',
+    #                  'rot',
+                   'cls',
+                   'hp_point2d',
+                   'palm2d', 'palm3d', 'tips2d', 'tips3d'
+  ]
+
+  train_monitors: [ 'loss',
+                    'heatmap'
+  ]
